@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html  lang="pt" >
+
+<head>    
+    <meta charset="utf-8" http-equiv="Content-Language" content="pt-br">
+    <title>Cadastro de cursos e Convidados - Login</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body>
+    <header>
+        <h1>Login</h1>
+        <h4>Entre com suas credenciais</h4>
+    </header>
+    <section>
+        <form action="/cadcurso" method="post">               
+            <br/>
+                <input required type="text" name="curso[nome]" placeholder="Nome do Curso"
+                    oninvalid="this.setCustomValidity('O campo nome deve ser preenchido')" >
+            <br><br>
+            <br/>
+                <input required type="text" name="curso[desc]" placeholder="Descrição do Curso"
+                    oninvalid="this.setCustomValidity('O campo nome deve ser preenchido')" >
+            <br><br>
+            <br/>
+                <input type="text" name="curso[ch]" placeholder="CH">
+            <br><br>
+            <br/>
+                <input type="text" name="curso[cat]" placeholder="Categoria">
+            <br>
+            <br>
+            <button type="submit">Cadastrar</button>
+        </form>
+    </section>
+    <br>
+    <section>
+        <a href='/menu'>Voltar ao menu</a>
+    </section>
+</body>
+
+</html>

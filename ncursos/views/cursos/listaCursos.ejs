@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Cadastro de cursos</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body>
+    <header>
+        <p>Bem-vindo,
+            <%= usuario.nome %>
+        </p>
+        <h1>Lista de cursos</h1>        
+    </header>
+    <section>
+        <!--será implementado em breve-->
+        <table>
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Descrição</th>
+                    <th>CH</th>
+                    <th>Categoria</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% cursos.forEach(function(curso, index) { %>
+                    <tr>
+                        <td>
+                            <%= curso.nome %>                                
+                        </td>
+                        <td>
+                            <%= curso.desc %>
+                        </td>
+                        <td>
+                            <%= curso.ch %>                                
+                        </td>
+                        <td>
+                            <%= curso.cat %>
+                        </td>          
+                    </tr>
+                    <% }) %>
+            </tbody>
+        </table>
+    </section>
+    <br>
+    <br>
+    <section>
+        <a href='/menu'>Voltar ao menu</a>
+    </section>
+    <footer>
+        <small>Sistema de Cadastro de cursos</small>
+    </footer>
+</body>
+
+</html>
